@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Find laptops that match your budget, specifications, condition and preferred stores.">
+<title>Laptop Finder — Find your next laptop</title>
+<style>
+:root{--bg:#0b1020;--panel:#121a2d;--panel2:#19243b;--text:#edf2ff;--muted:#9eacc7;--line:#293754;--accent:#8bb7ff;--accent2:#b9d2ff;--good:#8ee0bb}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 20% 0%,#1b2d50 0,transparent 42%),var(--bg);color:var(--text);font:15px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+a{color:var(--accent2)}.wrap{width:min(1120px,calc(100% - 32px));margin:auto}
+header{padding:22px 0;border-bottom:1px solid var(--line);background:#0b1020cc;position:sticky;top:0;backdrop-filter:blur(12px);z-index:2}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px}.logo{font-weight:850;letter-spacing:-.5px;font-size:20px}.logo span{color:var(--accent)}
+nav{display:flex;gap:18px;flex-wrap:wrap}nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--text)}
+.hero{padding:64px 0 34px}.eyebrow{color:var(--good);font-weight:750;text-transform:uppercase;letter-spacing:1.6px;font-size:12px}
+h1{font-size:clamp(36px,6vw,62px);line-height:1.04;letter-spacing:-2px;margin:12px 0 16px;max-width:760px}
+.hero p{color:var(--muted);font-size:17px;max-width:690px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+button,.btn{border:0;border-radius:12px;padding:12px 17px;background:var(--accent);color:#10182a;font-weight:800;cursor:pointer;text-decoration:none;display:inline-block}
+button.secondary,.btn.secondary{background:var(--panel2);color:var(--text);border:1px solid var(--line)}
+section{padding:26px 0 46px}.section-head{display:flex;justify-content:space-between;gap:16px;align-items:end;margin-bottom:18px}
+h2{font-size:27px;letter-spacing:-.7px;margin:0}.muted{color:var(--muted)}
+.layout{display:grid;grid-template-columns:310px 1fr;gap:18px;align-items:start}
+.panel,.card{background:linear-gradient(160deg,#16213a,#111a2d);border:1px solid var(--line);border-radius:18px;padding:20px}
+.panel h3{margin:0 0 15px;font-size:18px}.field{margin:0 0 15px}.field label,.field legend{display:block;font-weight:700;margin-bottom:7px}
+input,select{width:100%;padding:11px 12px;border-radius:10px;background:#0c1425;border:1px solid var(--line);color:var(--text);font:inherit}
+fieldset{border:0;padding:0;margin:0 0 15px} .checks{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.check{display:flex;gap:8px;align-items:center;color:var(--muted);font-size:14px}.check input{width:auto;accent-color:#8bb7ff}
+.results-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:13px;flex-wrap:wrap}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.card{padding:17px}.tag{display:inline-block;border:1px solid #3b5278;color:var(--accent2);border-radius:999px;padding:3px 9px;font-size:11px;font-weight:750}
+.card h3{margin:10px 0 2px;font-size:18px}.specs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 0;color:var(--muted);font-size:13px}
+.specs b{display:block;color:var(--text);font-size:14px}.price{font-size:23px;font-weight:850;margin:8px 0}.storelinks{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.storelinks a{font-size:12px;border:1px solid var(--line);border-radius:8px;padding:6px 9px;text-decoration:none}
+.note{font-size:12px;color:var(--muted);margin-top:12px}.empty{padding:30px;text-align:center;border:1px dashed var(--line);border-radius:16px;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:26px 0 42px;color:var(--muted);font-size:13px}
+@media(max-width:800px){.layout{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.hero{padding-top:44px}.nav{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><div class="logo">Laptop<span>Finder</span></div><nav><a href="#finder">Find a laptop</a><a href="#how">How it works</a><a href="#about">About</a></nav></div></header>
+<main class="wrap">
+<div class="hero">
+<div class="eyebrow">A smarter way to shop</div>
+<h1>Find a laptop that actually fits your needs.</h1>
+<p>Choose your budget, specs, laptop condition and preferred stores. Laptop Finder filters its catalog and shows matching options in one place.</p>
+<div class="actions"><a class="btn" href="#finder">Start finding</a><a class="btn secondary" href="#how">How it works</a></div>
+</div>
+<section id="finder">
+<div class="section-head"><div><div class="eyebrow">Personalized search</div><h2>Your laptop requirements</h2></div><span class="muted" id="catalogCount">Loading catalog…</span></div>
+<div class="layout">
+<aside class="panel">
+<h3>Filter laptops</h3>
+<div class="field"><label for="budget">Maximum budget (USD)</label><input id="budget" type="number" min="0" placeholder="e.g. 800"></div>
+<div class="field"><label for="country">Your country / delivery destination</label><input id="country" placeholder="e.g. Thailand"></div>
+<div class="field"><label for="purpose">Main use</label><select id="purpose"><option value="Any">Anything</option><option>Everyday</option><option>Business</option><option>Gaming</option><option>Ultrabook</option></select></div>
+<div class="field"><label for="os">Operating system</label><select id="os"><option value="Any">Any OS</option><option>Windows</option><option>macOS</option><option>Linux</option><option>ChromeOS</option></select></div>
+<div class="field"><label for="ram">Minimum RAM</label><select id="ram"><option value="0">Any</option><option value="8">8 GB</option><option value="16">16 GB</option><option value="32">32 GB</option><option value="64">64 GB</option></select></div>
+<div class="field"><label for="storage">Minimum storage</label><select id="storage"><option value="0">Any</option><option value="256">256 GB</option><option value="512">512 GB</option><option value="1024">1 TB</option><option value="2048">2 TB</option></select></div>
+<div class="field"><label for="screen">Preferred screen size</label><select id="screen"><option value="0">Any size</option><option value="14">14 inches or larger</option><option value="15">15 inches or larger</option><option value="17">17 inches or larger</option></select></div>
+<fieldset><legend>Accepted conditions</legend><div class="checks" id="conditions">
+<label class="check"><input type="checkbox" value="New" checked> New</label>
+<label class="check"><input type="checkbox" value="Second-hand" checked> Second-hand</label>
+<label class="check"><input type="checkbox" value="Discontinued" checked> Discontinued</label>
+<label class="check"><input type="checkbox" value="Refurbished" checked> Refurbished</label>
+</div><label class="check" style="margin-top:8px"><input type="checkbox" id="anyCondition"> Doesn't matter</label></fieldset>
+<fieldset><legend>Preferred stores</legend><div class="checks" id="stores">
+<label class="check"><input type="checkbox" value="Amazon" checked> Amazon</label>
+<label class="check"><input type="checkbox" value="eBay" checked> eBay</label>
+<label class="check"><input type="checkbox" value="Newegg"> Newegg</label>
+<label class="check"><input type="checkbox" value="Best Buy"> Best Buy</label>
+<label class="check"><input type="checkbox" value="Walmart"> Walmart</label>
+<label class="check"><input type="checkbox" value="AliExpress"> AliExpress</label>
+<label class="check"><input type="checkbox" value="Shopee" checked> Shopee</label>
+<label class="check"><input type="checkbox" value="Apple"> Apple</label>
+<label class="check"><input type="checkbox" value="Any website" id="anyStore"> Any website</label>
+</div></fieldset>
+<div class="field"><label for="brand">Brand</label><select id="brand"><option value="Any">Any brand</option></select></div>
+<button id="apply" style="width:100%">Show matching laptops</button>
+<button class="secondary" id="reset" style="width:100%;margin-top:8px">Reset filters</button>
+</aside>
+<div>
+<div class="results-top"><strong id="resultCount">Matching laptops</strong><select id="sort" style="width:auto"><option value="match">Best match</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="new">Newest year</option></select></div>
+<div class="grid" id="results"><div class="empty">Loading laptop catalog…</div></div>
+<p class="note">Prices and store links in this starter catalog are illustrative search examples, not verified live offers. Always check the exact SKU, seller, condition, shipping, taxes and warranty before buying.</p>
+</div>
+</div>
+</section>
+<section id="how"><div class="eyebrow">Simple process</div><h2>How it works</h2><p class="muted">1. Tell us what you need. 2. The matching engine filters the catalog. 3. Compare matching models and open store searches for your preferred marketplaces.</p></section>
+<section id="about"><div class="eyebrow">About this project</div><h2>A worldwide laptop discovery project</h2><p class="muted">This is a static GitHub Pages starter. Its sample catalog demonstrates the matching system. A truly worldwide, current catalog requires licensed product data and marketplace integrations or carefully maintained imports.</p></section>
+</main>
+<footer><div class="wrap">Laptop Finder · Independent comparison project · Not affiliated with the listed manufacturers or marketplaces.</div></footer>
+<script>
+let laptops=[];
+const $=id=>document.getElementById(id);
+const checked=id=>[...$(id).querySelectorAll('input[type=checkbox]:checked')].map(x=>x.value);
+function conditionSet(){return $('anyCondition').checked?['New','Second-hand','Discontinued','Refurbished']:checked('conditions')}
+function storeSet(){return $('anyStore').checked?null:checked('stores').filter(x=>x!=='Any website')}
+function matches(l){
+ const budget=Number($('budget').value)||Infinity, conditions=conditionSet(), stores=storeSet();
+ if(l.price>budget || !conditions.includes(l.condition)) return false;
+ if(Number($('ram').value)>l.ram_gb || Number($('storage').value)>l.storage_gb || Number($('screen').value)>l.screen_inches) return false;
+ if($('brand').value!=='Any' && l.brand!==$('brand').value) return false;
+ if($('purpose').value!=='Any' && l.category!==$('purpose').value) return false;
+ if($('os').value!=='Any' && !l.os.toLowerCase().includes($('os').value.toLowerCase())) return false;
+ if(stores && !l.stores.some(s=>stores.includes(s.name))) return false;
+ return true;
+}
+function render(){
+ let list=laptops.filter(matches), sort=$('sort').value;
+ if(sort==='low')list.sort((a,b)=>a.price-b.price);
+ if(sort==='high')list.sort((a,b)=>b.price-a.price);
+ if(sort==='new')list.sort((a,b)=>b.year-a.year);
+ $('resultCount').textContent=`${list.length} matching laptop${list.length===1?'':'s'}`;
+ $('results').innerHTML=list.length?list.map(l=>`
+ <article class="card"><span class="tag">${l.condition}</span> <span class="tag">${l.category}</span>
+ <h3>${l.brand} ${l.model}</h3><div class="muted">${l.year} · ${l.os}</div>
+ <div class="price">Approx. $${Number(l.price).toLocaleString()} <small class="muted" style="font-size:12px">${l.currency}</small></div>
+ <div class="specs"><div>Processor<b>${l.cpu}</b></div><div>Graphics<b>${l.gpu}</b></div><div>Memory<b>${l.ram_gb} GB RAM</b></div><div>Storage<b>${l.storage_gb>=1024?(l.storage_gb/1024)+' TB':l.storage_gb+' GB'}</b></div><div>Display<b>${l.screen_inches}"</b></div><div>Model year<b>${l.year}</b></div></div>
+ <div class="storelinks">${l.stores.filter(s=>!storeSet()||storeSet().includes(s.name)).map(s=>`<a href="${s.url}" target="_blank" rel="noopener noreferrer">${s.name} ↗</a>`).join('')}</div>
+ <p class="note">${l.notes||''}</p></article>`).join(''):'<div class="empty" style="grid-column:1/-1">No catalog entries match every selected filter. Try relaxing a requirement.</div>';
+}
+function populate(){
+ const brands=[...new Set(laptops.map(l=>l.brand))].sort();
+ $('brand').innerHTML='<option value="Any">Any brand</option>'+brands.map(b=>`<option>${b}</option>`).join('');
+ $('catalogCount').textContent=`${laptops.length} sample catalog entries`;
+ render();
+}
+fetch('./laptops.json').then(r=>{if(!r.ok)throw new Error('Could not load laptops.json');return r.json()}).then(data=>{laptops=data;populate()}).catch(()=>{$('results').innerHTML='<div class="empty">Could not load laptops.json. Make sure index.html and laptops.json are in the same folder and open the site through GitHub Pages or a local web server.</div>';});
+$('apply').addEventListener('click',render);$('sort').addEventListener('change',render);
+$('reset').addEventListener('click',()=>{['budget','country'].forEach(id=>$(id).value='');['purpose','os','ram','storage','screen','brand','sort'].forEach(id=>$(id).selectedIndex=0);$('conditions').querySelectorAll('input').forEach(x=>x.checked=true);$('stores').querySelectorAll('input').forEach(x=>x.checked=false);$('anyStore').checked=true;$('anyCondition').checked=true;render()});
+$('anyCondition').addEventListener('change',e=>{$('conditions').querySelectorAll('input').forEach(x=>x.disabled=e.target.checked);render()});
+$('anyStore').addEventListener('change',e=>{$('stores').querySelectorAll('input:not(#anyStore)').forEach(x=>x.disabled=e.target.checked);render()});
+$('conditions').addEventListener('change',render);$('stores').addEventListener('change',render);
+</script>
+</body>
+</html>

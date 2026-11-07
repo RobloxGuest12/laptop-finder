@@ -1,0 +1,222 @@
+[
+  {
+    "id": "thinkpad-t480",
+    "brand": "Lenovo",
+    "model": "ThinkPad T480",
+    "year": 2018,
+    "cpu": "Intel Core i5-8350U",
+    "gpu": "Intel UHD Graphics 620",
+    "ram_gb": 16,
+    "storage_gb": 512,
+    "screen_inches": 14,
+    "os": "Windows / Linux",
+    "price": 220,
+    "currency": "USD",
+    "condition": "Second-hand",
+    "category": "Business",
+    "stores": [
+      {
+        "name": "eBay",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Lenovo+ThinkPad+T480"
+      },
+      {
+        "name": "Shopee",
+        "url": "https://shopee.co.th/search?keyword=thinkpad%20t480"
+      }
+    ],
+    "notes": "Example listing search links; check seller, exact configuration and condition."
+  },
+  {
+    "id": "macbook-air-m2",
+    "brand": "Apple",
+    "model": "MacBook Air 13-inch (M2)",
+    "year": 2022,
+    "cpu": "Apple M2",
+    "gpu": "Integrated Apple GPU",
+    "ram_gb": 8,
+    "storage_gb": 256,
+    "screen_inches": 13.6,
+    "os": "macOS",
+    "price": 799,
+    "currency": "USD",
+    "condition": "New",
+    "category": "Ultrabook",
+    "stores": [
+      {
+        "name": "Apple",
+        "url": "https://www.apple.com/shop/buy-mac/macbook-air"
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/s?k=MacBook+Air+M2"
+      }
+    ],
+    "notes": "Illustrative catalog entry; verify whether this configuration is still sold new."
+  },
+  {
+    "id": "asus-vivobook-15",
+    "brand": "ASUS",
+    "model": "Vivobook 15 (example family)",
+    "year": 2024,
+    "cpu": "Intel Core i5 (varies by configuration)",
+    "gpu": "Integrated graphics",
+    "ram_gb": 16,
+    "storage_gb": 512,
+    "screen_inches": 15.6,
+    "os": "Windows",
+    "price": 550,
+    "currency": "USD",
+    "condition": "New",
+    "category": "Everyday",
+    "stores": [
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/s?k=ASUS+Vivobook+15"
+      },
+      {
+        "name": "Newegg",
+        "url": "https://www.newegg.com/p/pl?d=ASUS+Vivobook+15"
+      },
+      {
+        "name": "Shopee",
+        "url": "https://shopee.co.th/search?keyword=asus%20vivobook%2015"
+      }
+    ],
+    "notes": "Family-level example: CPU, display and memory vary by exact SKU."
+  },
+  {
+    "id": "dell-latitude-5420",
+    "brand": "Dell",
+    "model": "Latitude 5420",
+    "year": 2021,
+    "cpu": "Intel Core i5-1145G7",
+    "gpu": "Intel Iris Xe Graphics",
+    "ram_gb": 16,
+    "storage_gb": 512,
+    "screen_inches": 14,
+    "os": "Windows / Linux",
+    "price": 280,
+    "currency": "USD",
+    "condition": "Refurbished",
+    "category": "Business",
+    "stores": [
+      {
+        "name": "eBay",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Dell+Latitude+5420"
+      },
+      {
+        "name": "Shopee",
+        "url": "https://shopee.co.th/search?keyword=dell%20latitude%205420"
+      }
+    ],
+    "notes": "Example refurbished model; refurbishment standards vary by seller."
+  },
+  {
+    "id": "acer-aspire-5",
+    "brand": "Acer",
+    "model": "Aspire 5 (example family)",
+    "year": 2023,
+    "cpu": "AMD Ryzen 5 (varies by configuration)",
+    "gpu": "Integrated Radeon Graphics",
+    "ram_gb": 8,
+    "storage_gb": 512,
+    "screen_inches": 15.6,
+    "os": "Windows",
+    "price": 430,
+    "currency": "USD",
+    "condition": "Discontinued",
+    "category": "Everyday",
+    "stores": [
+      {
+        "name": "Walmart",
+        "url": "https://www.walmart.com/search?q=Acer+Aspire+5"
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/s?k=Acer+Aspire+5"
+      }
+    ],
+    "notes": "Example family entry; discontinued status depends on region and SKU."
+  },
+  {
+    "id": "hp-elitebook-840-g7",
+    "brand": "HP",
+    "model": "EliteBook 840 G7",
+    "year": 2020,
+    "cpu": "Intel Core i5-10310U",
+    "gpu": "Intel UHD Graphics",
+    "ram_gb": 16,
+    "storage_gb": 256,
+    "screen_inches": 14,
+    "os": "Windows / Linux",
+    "price": 190,
+    "currency": "USD",
+    "condition": "Second-hand",
+    "category": "Business",
+    "stores": [
+      {
+        "name": "eBay",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=HP+EliteBook+840+G7"
+      },
+      {
+        "name": "Shopee",
+        "url": "https://shopee.co.th/search?keyword=hp%20elitebook%20840%20g7"
+      }
+    ],
+    "notes": "Example second-hand model; check battery health and exact specs."
+  },
+  {
+    "id": "msi-katana-15",
+    "brand": "MSI",
+    "model": "Katana 15 (example family)",
+    "year": 2024,
+    "cpu": "Intel Core i7 (varies by configuration)",
+    "gpu": "NVIDIA GeForce RTX (varies)",
+    "ram_gb": 16,
+    "storage_gb": 1024,
+    "screen_inches": 15.6,
+    "os": "Windows",
+    "price": 1050,
+    "currency": "USD",
+    "condition": "New",
+    "category": "Gaming",
+    "stores": [
+      {
+        "name": "Newegg",
+        "url": "https://www.newegg.com/p/pl?d=MSI+Katana+15"
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/s?k=MSI+Katana+15"
+      }
+    ],
+    "notes": "Family-level example; GPU and display vary significantly by SKU."
+  },
+  {
+    "id": "surface-laptop-4",
+    "brand": "Microsoft",
+    "model": "Surface Laptop 4",
+    "year": 2021,
+    "cpu": "AMD Ryzen 5 / Intel Core i5 (configuration-dependent)",
+    "gpu": "Integrated graphics",
+    "ram_gb": 8,
+    "storage_gb": 256,
+    "screen_inches": 13.5,
+    "os": "Windows",
+    "price": 300,
+    "currency": "USD",
+    "condition": "Refurbished",
+    "category": "Ultrabook",
+    "stores": [
+      {
+        "name": "eBay",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Surface+Laptop+4"
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/s?k=Surface+Laptop+4"
+      }
+    ],
+    "notes": "Example refurbished search; verify battery, keyboard and screen condition."
+  }
+]
